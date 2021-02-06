@@ -19,7 +19,7 @@ class LinebotController < ApplicationController
                 text: event.message['text']
               }
               res=client.reply_message(event['replyToken'],message)
-              p res
+              # p res
             end
         end
     end
