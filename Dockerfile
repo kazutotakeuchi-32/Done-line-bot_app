@@ -5,7 +5,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get update && apt-get install -y yarn
 RUN apt-get update && apt-get install -y curl apt-transport-https wget
 # Node.jsをインストール
-ENV LANG C.UTF-8
+# ENV LANG C.UTF-8i
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
 apt-get install nodejs
 RUN mkdir /app
