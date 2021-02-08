@@ -1,4 +1,4 @@
-FROM ruby:2.7.0
+FROM ruby:2.6.0
 RUN apt-get update -qq && apt-get install -y postgresql-client build-essential nodejs apt-transport-https
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list

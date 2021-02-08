@@ -1,6 +1,6 @@
-class LinebotController < ApplicationController
+class LinebotsController < ApplicationController
   require 'line/bot'
-  protected_from_forgery :except =>[:callback]
+  protect_from_forgery :except =>[:callback]
 
   def callback
     body = request.body.read
@@ -33,4 +33,5 @@ class LinebotController < ApplicationController
         config.channel_secret = ENV['LINE_BOT_CHANNEL_TOKEN']
       end
     end
+
 end
